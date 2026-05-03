@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="M. Jasim Waheed - Full Stack Developer, UI/UX Designer & Software Engineer based in Pakistan.">
+  <meta name="keywords" content="M. Jasim Waheed, Full Stack Developer, UI/UX Designer, Software Engineer, Pakistan, Web Developer">
+  <meta name="author" content="M. Jasim Waheed">
+  <meta property="og:title" content="M. Jasim Waheed | Full Stack Developer">
+  <meta property="og:description" content="Full Stack Developer · UI/UX Designer · Software Engineer">
+  <meta property="og:type" content="website">
+  <title>M. Jasim Waheed | Full Stack Developer & UI/UX Designer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-text">JASIM.DEV</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <div style="font-family:'Share Tech Mono',monospace;font-size:0.72rem;color:#3d6b4f;letter-spacing:3px;">LOADING PORTFOLIO...</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#home" class="nav-logo">
+    <span></span>
+    JASIM.DEV
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
+    <li><a href="#about" data-i18n="nav_about">About</a></li>
+    <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+    <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+    <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ur">اردو</button>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+  <!-- Slideshow Backgrounds -->
+  <div class="hero-slides">
+    <div class="hero-slide hero-slide-1 active"></div>
+    <div class="hero-slide hero-slide-2"></div>
+    <div class="hero-slide hero-slide-3"></div>
+  </div>
+
+  <!-- Floating particles effect -->
+  <canvas id="particleCanvas" style="position:absolute;inset:0;z-index:1;pointer-events:none;"></canvas>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero_badge">AVAILABLE FOR HIRE</div>
+
+    <div class="hero-name">
+      <span style="color:var(--text-dim);font-size:0.5em;display:block;font-weight:400;letter-spacing:6px;margin-bottom:8px;" data-i18n="hero_greeting">Hello, I am</span>
+      <span class="highlight glow-text">M. JASIM</span><br>
+      <span style="color:var(--text);">WAHEED</span>
+    </div>
+
+    <div class="hero-title">
+      &gt; <span id="typewriter" style="color:var(--secondary);"></span><span style="animation:blink 1s infinite;color:var(--primary);">_</span>
+    </div>
+
+    <p class="hero-desc" data-i18n="hero_desc">
+      Crafting high-performance digital experiences with clean code, intuitive design, and cutting-edge technology.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary" data-i18n="hero_btn1">View Projects</a>
+      <a href="M.JASIM WAHEED.pdf" class="btn btn-outline" download data-i18n="hero_btn2">Download CV</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-target="30" data-suffix="+">0+</span>
+        <span class="stat-label" data-i18n="stat1_label">Projects Done</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="20" data-suffix="+">0+</span>
+        <span class="stat-label" data-i18n="stat2_label">Clients Served</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="15" data-suffix="+">0+</span>
+        <span class="stat-label" data-i18n="stat3_label">Technologies</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide dots -->
+  <div class="slide-dots">
+    <div class="slide-dot active"></div>
+    <div class="slide-dot"></div>
+    <div class="slide-dot"></div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- ===== SKILLS SECTION ===== -->
+<section id="skills" style="background:linear-gradient(180deg, var(--bg-dark) 0%, rgba(0,20,10,0.5) 100%);">
+  <div class="section-header reveal">
+    <span class="section-tag" data-i18n="skills_tag">WHAT I DO</span>
+    <h2 class="section-title" data-i18n="skills_title">My <span>Expertise</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <span class="skill-icon">🌐</span>
+      <div class="skill-name">FRONTEND DEV</div>
+      <p class="skill-desc">Building pixel-perfect, responsive UIs with modern frameworks and animations that delight users.</p>
+      <div class="skill-tags">
+        <span class="tag">React</span><span class="tag">Vue.js</span><span class="tag">Next.js</span>
+        <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Tailwind</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <span class="skill-icon">⚙️</span>
+      <div class="skill-name">BACKEND DEV</div>
+      <p class="skill-desc">Scalable server-side architectures, REST APIs, GraphQL, and robust database design.</p>
+      <div class="skill-tags">
+        <span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">PHP</span>
+        <span class="tag">Express</span><span class="tag">Django</span><span class="tag">Laravel</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <span class="skill-icon">📱</span>
+      <div class="skill-name">MOBILE APPS</div>
+      <p class="skill-desc">Cross-platform mobile applications with native-like performance and experience.</p>
+      <div class="skill-tags">
+        <span class="tag">React Native</span><span class="tag">Flutter</span>
+        <span class="tag">Expo</span><span class="tag">Android</span><span class="tag">iOS</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <span class="skill-icon">🎨</span>
+      <div class="skill-name">UI/UX DESIGN</div>
+      <p class="skill-desc">User-centered design that balances aesthetics with functionality for memorable digital products.</p>
+      <div class="skill-tags">
+        <span class="tag">Figma</span><span class="tag">Adobe XD</span><span class="tag">Photoshop</span>
+        <span class="tag">Illustrator</span><span class="tag">Prototyping</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <span class="skill-icon">🗄️</span>
+      <div class="skill-name">DATABASE</div>
+      <p class="skill-desc">Efficient data modeling and management across SQL and NoSQL database systems.</p>
+      <div class="skill-tags">
+        <span class="tag">MongoDB</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span>
+        <span class="tag">Firebase</span><span class="tag">Redis</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal">
+      <span class="skill-icon">☁️</span>
+      <div class="skill-name">DEVOPS & CLOUD</div>
+      <p class="skill-desc">Deployment, CI/CD pipelines, containerization, and cloud infrastructure management.</p>
+      <div class="skill-tags">
+        <span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Git</span>
+        <span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">Vercel</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-tag" data-i18n="projects_tag">PORTFOLIO</span>
+    <h2 class="section-title" data-i18n="projects_title">Featured <span>Projects</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid">
+    <!-- Loaded from localStorage via JS -->
+    <div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-muted);font-family:'Share Tech Mono',monospace;">
+      // Loading projects...
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:50px;" class="reveal">
+    <a href="projects.html" class="btn btn-outline" data-i18n="view_all">View All Projects</a>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about" style="background:linear-gradient(180deg, transparent, rgba(0,20,10,0.3), transparent);">
+  <div class="section-header reveal">
+    <span class="section-tag" data-i18n="about_tag">WHO I AM</span>
+    <h2 class="section-title" data-i18n="about_title">About <span>Me</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <div style="position:relative;max-width:380px;margin:0 auto;">
+        <div class="about-img-frame">
+          <!-- Replace with your actual photo: <img src="images/jasim.jpg" alt="M. Jasim Waheed" style="width:100%;height:100%;object-fit:cover;"> -->
+          <span style="font-size:5rem;">👨‍💻</span>
+        </div>
+        <div class="about-corner about-corner-tl"></div>
+        <div class="about-corner about-corner-tr"></div>
+        <div class="about-corner about-corner-bl"></div>
+        <div class="about-corner about-corner-br"></div>
+        <div class="about-exp-badge">
+          <span class="num">3+</span>
+          <span class="lbl" data-i18n="about_exp">Years Experience</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-info reveal">
+      <h2>M. <span>Jasim</span> Waheed</h2>
+      <div class="about-role">// Full Stack Developer · UI/UX Designer · Software Engineer</div>
+
+      <p class="about-text" data-i18n="about_text">
+        I am M. Jasim Waheed, a passionate Full Stack Developer and UI/UX Designer based in Pakistan. I build complete digital solutions — from sleek frontend interfaces to robust backend systems and everything in between. With expertise spanning web development, mobile apps, and software engineering, I deliver end-to-end solutions that are fast, scalable, and visually stunning.
+      </p>
+
+      <div class="about-details">
+        <div class="about-detail-item">
+          <span class="detail-key">Name</span>
+          <span class="detail-val">M. Jasim Waheed</span>
+        </div>
+        <div class="about-detail-item">
+          <span class="detail-key">Location</span>
+          <span class="detail-val">Pakistan 🇵🇰</span>
+        </div>
+        <div class="about-detail-item">
+          <span class="detail-key">Email</span>
+          <span class="detail-val">jasim@email.com</span>
+        </div>
+        <div class="about-detail-item">
+          <span class="detail-key">Status</span>
+          <span class="detail-val" style="color:var(--primary);">✅ Available</span>
+        </div>
+        <div class="about-detail-item">
+          <span class="detail-key">Languages</span>
+          <span class="detail-val">Urdu, English, Pashto</span>
+        </div>
+        <div class="about-detail-item">
+          <span class="detail-key">Freelance</span>
+          <span class="detail-val">Open to offers</span>
+        </div>
+      </div>
+
+      <div class="about-actions">
+        <a href="M.JASIM WAHEED.pdf" class="btn btn-primary" download data-i18n="download_cv">📄 Download CV</a>
+        <a href="#contact" class="btn btn-outline">📬 Hire Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE SECTION ===== -->
+<section id="experience">
+  <div class="section-header reveal">
+    <span class="section-tag" data-i18n="exp_tag">CAREER PATH</span>
+    <h2 class="section-title" data-i18n="exp_title">My <span>Experience</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="timeline" id="experienceTimeline">
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">2025 – Present</div>
+      <div class="timeline-title">Full Stack Developer</div>
+      <div class="timeline-org">Freelancer · Remote</div>
+      <p class="timeline-desc">Building complete web and mobile applications for clients. Specializing in React, Node.js, and modern UI/UX design while continuing studies.</p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-year">2025 – Present</div>
+      <div class="timeline-title">BS Software Engineering — 2nd Semester</div>
+      <div class="timeline-org">COMSATS University Attock · Pakistan</div>
+      <p class="timeline-desc">Currently enrolled in BS Software Engineering at COMSATS Institute of Information Technology, Attock Campus. Building strong foundations in programming, algorithms, and software development.</p>
+    </div>
+
+  </div>
+</section>
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" style="background:linear-gradient(180deg, transparent, rgba(0,20,10,0.4));">
+  <div class="section-header reveal">
+    <span class="section-tag" data-i18n="contact_tag">GET IN TOUCH</span>
+    <h2 class="section-title" data-i18n="contact_title">Contact <span>Me</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="contact-wrap">
+    <div class="contact-info reveal">
+      <h3>Let's Build Something Amazing</h3>
+      <p data-i18n="contact_desc">Have a project in mind? Let's build something amazing together. I respond within 24 hours.</p>
+
+      <div class="contact-items">
+        <a href="mailto:jasim@email.com" class="contact-item">
+          <span class="contact-icon">📧</span>
+          <div>
+            <span class="contact-detail-label">Email</span>
+            <span class="contact-detail-val">jasim@email.com</span>
+          </div>
+        </a>
+
+        <a href="tel:+923001234567" class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <span class="contact-detail-label">Phone / WhatsApp</span>
+            <span class="contact-detail-val">+92 300 1234567</span>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/jasim-waheed-3a93753a1/" target="_blank" class="contact-item">
+          <span class="contact-icon">💼</span>
+          <div>
+            <span class="contact-detail-label">LinkedIn</span>
+            <span class="contact-detail-val">linkedin.com/in/jasimwaheed</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/jasimwaheed" target="_blank" class="contact-item">
+          <span class="contact-icon">⚙️</span>
+          <div>
+            <span class="contact-detail-label">GitHub</span>
+            <span class="contact-detail-val">github.com/jasimwaheed</span>
+          </div>
+        </a>
+
+        <div class="contact-item" style="text-decoration:none;">
+          <span class="contact-icon">📍</span>
+          <div>
+            <span class="contact-detail-label">Location</span>
+            <span class="contact-detail-val">Pakistan 🇵🇰</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="form_name">Your Name</label>
+            <input type="text" name="name" placeholder="Muhammad Ali" required data-i18n-placeholder="form_name">
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_email">Email Address</label>
+            <input type="email" name="email" placeholder="you@example.com" required data-i18n-placeholder="form_email">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Subject</label>
+          <select name="subject">
+            <option value="Project Inquiry">Project Inquiry</option>
+            <option value="Freelance Work">Freelance Work</option>
+            <option value="Job Opportunity">Job Opportunity</option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="form_msg">Your Message</label>
+          <textarea name="message" placeholder="Tell me about your project or idea..." required data-i18n-placeholder="form_msg"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="form_send">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">⚡ JASIM.DEV</span>
+      <p>Full Stack Developer · UI/UX Designer · Software Engineer. Building the digital future, one line of code at a time.</p>
+      <div class="social-links" style="margin-top:20px;">
+        <a href="https://github.com/jasimwaheed" class="social-link" target="_blank">⚙️</a>
+        <a href="https://www.linkedin.com/in/jasim-waheed-3a93753a1/" class="social-link" target="_blank">💼</a>
+        <a href="mailto:jasimkhan5917@gmail.com" class="social-link">📧</a>
+        <a href="https://wa.me/923145216614" class="social-link" target="_blank">📱</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#contact">Web Development</a></li>
+        <li><a href="#contact">Mobile Apps</a></li>
+        <li><a href="#contact">UI/UX Design</a></li>
+        <li><a href="#contact">Software Solutions</a></li>
+        <li><a href="admin.html">Admin Panel</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 M. Jasim Waheed. All rights reserved. Crafted with ⚡ & ☕</p>
+    <p style="font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--text-muted);">
+      // Made in Pakistan 🇵🇰
+    </p>
+  </div>
+</footer>
+
+<div id="notification" class="notification"></div>
+
+<script src="main.js"></script>
+
+<!-- Particle effect -->
+<script>
+(function() {
+  const canvas = document.getElementById('particleCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function createParticle() {
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: -Math.random() * 0.5 - 0.1,
+      size: Math.random() * 2 + 0.5,
+      opacity: Math.random() * 0.4 + 0.1,
+      life: 0,
+      maxLife: Math.random() * 300 + 200
+    };
+  }
+
+  for (let i = 0; i < 60; i++) particles.push(createParticle());
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach((p, i) => {
+      p.x += p.vx; p.y += p.vy; p.life++;
+      const alpha = p.life < 50 ? (p.life/50) * p.opacity : p.life > p.maxLife - 50 ? ((p.maxLife-p.life)/50) * p.opacity : p.opacity;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0,255,136,${alpha})`;
+      ctx.fill();
+      if (p.life >= p.maxLife || p.y < 0) particles[i] = createParticle();
+    });
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  draw();
+})();
+</script>
+
+</body>
+</html>

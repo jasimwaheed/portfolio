@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | M. Jasim Waheed</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <a href="../index.html" class="nav-logo"><span></span>JASIM.DEV</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ur">اردو</button>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div style="padding-top:var(--nav-height);">
+
+  <div style="padding:80px 40px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(0,255,136,0.04) 0%,transparent 100%);">
+    <span class="section-tag">GET IN TOUCH</span>
+    <h1 class="section-title" style="margin:12px 0;">Let's <span>Connect</span></h1>
+    <p style="color:var(--text-dim);max-width:500px;margin:0 auto;">Ready to bring your ideas to life? Let's talk.</p>
+  </div>
+
+  <section id="contact">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <h3>Let's Build Something Amazing</h3>
+        <p>Have a project in mind? Let's build something amazing together. I respond within 24 hours.</p>
+
+        <div class="contact-items">
+          <a href="mailto:jasimkhan5917@gmail.com" class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <span class="contact-detail-label">Email</span>
+              <span class="contact-detail-val">jasimkhan5917@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:+923145216614" class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <span class="contact-detail-label">Phone / WhatsApp</span>
+              <span class="contact-detail-val">+92 314 521 6614</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jasim-waheed-3a93753a1/" target="_blank" class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <span class="contact-detail-label">LinkedIn</span>
+              <span class="contact-detail-val">linkedin.com/in/jasim-waheed-3a93753a1/</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/jasimwaheed" target="_blank" class="contact-item">
+            <span class="contact-icon">⚙️</span>
+            <div>
+              <span class="contact-detail-label">GitHub</span>
+              <span class="contact-detail-val">github.com/jasimwaheed</span>
+            </div>
+          </a>
+
+          <a href="https://wa.me/923145216614" target="_blank" class="contact-item">
+            <span class="contact-icon">💬</span>
+            <div>
+              <span class="contact-detail-label">WhatsApp</span>
+              <span class="contact-detail-val">Chat on WhatsApp</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Availability -->
+        <div style="margin-top:30px;padding:20px;background:rgba(0,255,136,0.05);border:1px solid rgba(0,255,136,0.2);border-radius:8px;">
+          <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--primary);letter-spacing:2px;margin-bottom:8px;">// AVAILABILITY</div>
+          <div style="color:var(--text-dim);font-size:0.9rem;">
+            ✅ Open to <strong style="color:var(--text);">freelance projects</strong><br>
+            ✅ Available for <strong style="color:var(--text);">full-time positions</strong><br>
+            ✅ Interested in <strong style="color:var(--text);">collaborations</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="Muhammad Ali" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Phone (Optional)</label>
+            <input type="tel" name="phone" placeholder="+92 xxx xxxxxxx">
+          </div>
+
+          <div class="form-group">
+            <label>Subject</label>
+            <select name="subject">
+              <option value="Project Inquiry">Project Inquiry</option>
+              <option value="Freelance Work">Freelance Work</option>
+              <option value="Job Opportunity">Job Opportunity</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Budget Range</label>
+            <select name="budget">
+              <option value="Below $500">Below $500</option>
+              <option value="$500 - $1,000">$500 – $1,000</option>
+              <option value="$1,000 - $5,000">$1,000 – $5,000</option>
+              <option value="$5,000+">$5,000+</option>
+              <option value="Let's discuss">Let's discuss</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project, timeline, and requirements..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">📨 Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;">
+    <p>© 2024 M. Jasim Waheed. All rights reserved.</p>
+    <p style="font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--text-muted);">// Made in Pakistan 🇵🇰</p>
+  </div>
+</footer>
+
+<div id="notification" class="notification"></div>
+<script src="main.js"></script>
+</body>
+</html>

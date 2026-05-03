@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | M. Jasim Waheed</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <a href="../index.html" class="nav-logo"><span></span>JASIM.DEV</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ur">اردو</button>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div style="padding-top:var(--nav-height);">
+
+  <!-- HERO -->
+  <div style="padding:80px 40px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(0,255,136,0.04) 0%,transparent 100%);">
+    <span class="section-tag">WHO I AM</span>
+    <h1 class="section-title" style="margin:12px 0 0;">About <span>Me</span></h1>
+  </div>
+
+  <!-- ABOUT CONTENT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div style="position:relative;max-width:380px;margin:0 auto;">
+          <div class="about-img-frame">
+            <span style="font-size:5rem;">👨‍💻</span>
+          </div>
+          <div class="about-corner about-corner-tl"></div>
+          <div class="about-corner about-corner-tr"></div>
+          <div class="about-corner about-corner-bl"></div>
+          <div class="about-corner about-corner-br"></div>
+          <div class="about-exp-badge">
+            <span class="num">3+</span>
+            <span class="lbl">Years Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-info reveal">
+        <h2>M. <span>Jasim</span> Waheed</h2>
+        <div class="about-role">// Full Stack Developer · UI/UX Designer · Software Engineer</div>
+
+        <p class="about-text">
+          I am M. Jasim Waheed, a passionate Full Stack Developer and UI/UX Designer based in Pakistan. I build complete digital solutions — from sleek frontend interfaces to robust backend systems and everything in between.
+        </p>
+        <p class="about-text">
+          With expertise spanning web development, mobile apps, and software engineering, I deliver end-to-end solutions that are fast, scalable, and visually stunning. My passion is turning complex problems into simple, beautiful, and intuitive designs.
+        </p>
+
+        <div class="about-details">
+          <div class="about-detail-item">
+            <span class="detail-key">Name</span>
+            <span class="detail-val">M. Jasim Waheed</span>
+          </div>
+          <div class="about-detail-item">
+            <span class="detail-key">Location</span>
+            <span class="detail-val">Pakistan 🇵🇰</span>
+          </div>
+          <div class="about-detail-item">
+            <span class="detail-key">Email</span>
+            <span class="detail-val">jasim@email.com</span>
+          </div>
+          <div class="about-detail-item">
+            <span class="detail-key">Phone</span>
+            <span class="detail-val">+92 300 1234567</span>
+          </div>
+          <div class="about-detail-item">
+            <span class="detail-key">Languages</span>
+            <span class="detail-val">Urdu, English, Pashto</span>
+          </div>
+          <div class="about-detail-item">
+            <span class="detail-key">Freelance</span>
+            <span class="detail-val" style="color:var(--primary);">✅ Available</span>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <a href="M.JASIM WAHEED.pdf" class="btn btn-primary" download>📄 Download CV</a>
+          <a href="contact.html" class="btn btn-outline">📬 Hire Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section style="padding:80px 40px;border-top:1px solid var(--border);">
+    <div class="section-header reveal">
+      <span class="section-tag">EXPERTISE</span>
+      <h2 class="section-title">Technical <span>Skills</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div style="max-width:900px;margin:0 auto;">
+      <div id="skills-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;"></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;">
+    <p>© 2024 M. Jasim Waheed. All rights reserved.</p>
+    <p style="font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--text-muted);">// Made in Pakistan 🇵🇰</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  const skills = [
+    {name:'HTML / CSS', level:95},
+    {name:'JavaScript', level:90},
+    {name:'React.js', level:88},
+    {name:'Node.js', level:82},
+    {name:'Python', level:78},
+    {name:'React Native', level:75},
+    {name:'UI/UX Design', level:85},
+    {name:'MongoDB', level:80},
+    {name:'PostgreSQL', level:75},
+    {name:'Docker', level:65},
+    {name:'AWS', level:60},
+    {name:'Figma', level:85},
+  ];
+
+  const grid = document.getElementById('skills-grid');
+  grid.innerHTML = skills.map(s => `
+    <div class="skill-card reveal" style="padding:18px 20px;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+        <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-dim);">${s.name}</span>
+        <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--primary);">${s.level}%</span>
+      </div>
+      <div style="height:4px;background:var(--border);border-radius:2px;overflow:hidden;">
+        <div style="height:100%;width:${s.level}%;background:linear-gradient(90deg,var(--primary),var(--secondary));border-radius:2px;transition:width 1s ease;"></div>
+      </div>
+    </div>
+  `).join('');
+</script>
+</body>
+</html>

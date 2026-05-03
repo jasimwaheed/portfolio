@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | M. Jasim Waheed</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar scrolled" id="navbar">
+  <a href="../index.html" class="nav-logo"><span></span>JASIM.DEV</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ur">اردو</button>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div style="padding-top:var(--nav-height);min-height:100vh;">
+  <!-- PAGE HEADER -->
+  <div style="padding:80px 40px 60px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(0,255,136,0.04) 0%,transparent 100%);">
+    <span class="section-tag">PORTFOLIO</span>
+    <h1 class="section-title" style="margin:12px 0;">All <span>Projects</span></h1>
+    <p style="color:var(--text-dim);max-width:500px;margin:0 auto 30px;">Every project is a story of challenges solved and ideas brought to life.</p>
+
+    <!-- Filters -->
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;" id="filterBtns">
+      <button class="btn btn-primary filter-btn" data-filter="all" style="padding:8px 20px;font-size:0.8rem;">All</button>
+      <button class="btn btn-outline filter-btn" data-filter="Web App" style="padding:8px 20px;font-size:0.8rem;">Web App</button>
+      <button class="btn btn-outline filter-btn" data-filter="Mobile" style="padding:8px 20px;font-size:0.8rem;">Mobile</button>
+      <button class="btn btn-outline filter-btn" data-filter="UI/UX" style="padding:8px 20px;font-size:0.8rem;">UI/UX</button>
+      <button class="btn btn-outline filter-btn" data-filter="E-Commerce" style="padding:8px 20px;font-size:0.8rem;">E-Commerce</button>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <div style="padding:60px 40px;">
+    <div class="projects-grid" id="allProjectsGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text-muted);font-family:'Share Tech Mono',monospace;">
+        // Loading projects...
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-bottom" style="max-width:1200px;margin:0 auto;">
+    <p>© 2024 M. Jasim Waheed. All rights reserved.</p>
+    <p style="font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--text-muted);">// Made in Pakistan 🇵🇰</p>
+  </div>
+</footer>
+
+<div id="notification" class="notification"></div>
+<script src="main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function renderAllProjects(filter = 'all') {
+    const grid = document.getElementById('allProjectsGrid');
+    let projects = JSON.parse(localStorage.getItem('portfolio_projects') || '[]');
+
+    if (filter !== 'all') {
+      projects = projects.filter(p => p.category.toLowerCase().includes(filter.toLowerCase()));
+    }
+
+    if (projects.length === 0) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:80px;color:var(--text-muted);font-family:\'Share Tech Mono\',monospace;">// No projects found. Add some from the admin panel!</div>';
+      return;
+    }
+
+    grid.innerHTML = projects.map(p => `
+      <div class="project-card reveal">
+        ${p.imageUrl
+          ? `<img src="${p.imageUrl}" alt="${p.title}" style="width:100%;height:180px;object-fit:cover;border-radius:8px 8px 0 0;" onerror="this.outerHTML='<div class=\'project-img-placeholder\'>${p.emoji || '🚀'}</div>'">`
+          : `<div class="project-img-placeholder">${p.emoji || '🚀'}</div>`
+        }
+        <span class="project-status status-${p.status === 'Live' ? 'live' : 'dev'}">${p.status}</span>
+        <div class="project-body">
+          <div class="project-cat">${p.category}</div>
+          <h3 class="project-title">${p.title}</h3>
+          <p class="project-desc">${p.description}</p>
+          <div class="project-tech">
+            ${(p.tech||'').split(',').map(t => `<span class="tag">${t.trim()}</span>`).join('')}
+          </div>
+          <div class="project-links">
+            ${p.liveUrl ? `<a href="${p.liveUrl}" class="proj-link" target="_blank">🌐 Live Demo</a>` : ''}
+            ${p.githubUrl ? `<a href="${p.githubUrl}" class="proj-link" target="_blank">⚙️ GitHub</a>` : ''}
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      setTimeout(() => el.classList.add('visible'), 100);
+    });
+  }
+
+  renderAllProjects();
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      btn.classList.remove('btn-outline');
+      btn.classList.add('btn-primary');
+      renderAllProjects(btn.dataset.filter);
+    });
+  });
+});
+</script>
+</body>
+</html>
